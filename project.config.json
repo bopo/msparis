@@ -2,9 +2,9 @@
   "miniprogramRoot": "./dist",
   "projectname": "taro-msparis",
   "description": "",
-  "appid": "wxd2a161b3c8752b6f",
+  "appid": "wx0dcb11257c9af801",
   "setting": {
-    "urlCheck": true,
+    "urlCheck": false,
     "es6": false,
     "postcss": false,
     "minified": false
