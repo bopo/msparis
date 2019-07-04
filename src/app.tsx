@@ -1,9 +1,10 @@
 import '@tarojs/async-await';
 import Taro, { Component } from '@tarojs/taro';
+import { Provider } from '@tarojs/redux';
+
 import Home from './pages/home';
 import dva from './utils/dva';
 import models from './models';
-import { Provider } from '@tarojs/redux';
 
 import './styles/base.scss';
 

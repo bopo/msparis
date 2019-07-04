@@ -21,13 +21,13 @@ export default class MySwiper extends Component {
         className={!home ? 'swiper-container' : 'swiper'}
         circular
         indicatorDots
-        indicatorColor="#999"
-        indicatorActiveColor="#bf708f"
+        indicatorColor='#999'
+        indicatorActiveColor='#bf708f'
         autoplay
       >
         {banner.map((item, index) => (
           <SwiperItem key={index}>
-            <Image mode="widthFix" src={`${item.image_src}!w750`} />
+            <Image mode='widthFix' src={`${item.image_src}!w750`} />
           </SwiperItem>
         ))}
       </Swiper>

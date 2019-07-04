@@ -55,8 +55,8 @@ class Order extends Component {
   render() {
     const { orderType, activeTypeIndex } = this.state;
     return (
-      <View className="order-page">
-        <View className="toggleType">
+      <View className='order-page'>
+        <View className='toggleType'>
           {orderType.map((item, index) => (
             <View
               key={index}
@@ -68,7 +68,7 @@ class Order extends Component {
             </View>
           ))}
         </View>
-        <View className="empty" />
+        <View className='empty' />
       </View>
     );
   }

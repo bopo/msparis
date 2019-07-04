@@ -17,33 +17,33 @@ class ClothingsItem extends Component {
   render() {
     const { clothing, onDeleteClothing } = this.props;
     return (
-      <View className="ClothingsItem-page">
-        <View className="WhiteSpace" />
-        <View className="hr" />
+      <View className='ClothingsItem-page'>
+        <View className='WhiteSpace' />
+        <View className='hr' />
         {clothing.map(item => (
           <View key={item.product_id}>
-            <View className="WhiteSpace" />
-            <View className="clothing">
-              <View className="shop-img">
-                <Image mode="widthFix" src={`${item.images}!w750`} />
+            <View className='WhiteSpace' />
+            <View className='clothing'>
+              <View className='shop-img'>
+                <Image mode='widthFix' src={`${item.images}!w750`} />
               </View>
-              <View className="content">
-                <View className="title p">{item.brand}</View>
-                <View className="info p">{item.name}</View>
-                <View className="size p">
+              <View className='content'>
+                <View className='title p'>{item.brand}</View>
+                <View className='info p'>{item.name}</View>
+                <View className='size p'>
                   {`${item.spu} | ${item.specification || '均码'}`}
                 </View>
               </View>
-              <View className="edit">
+              <View className='edit'>
                 <View
-                  className="iconfont icon-delete"
+                  className='iconfont icon-delete'
                   data-id={item.product_id}
                   onClick={onDeleteClothing}
                 />
               </View>
             </View>
-            <View className="WhiteSpace" />
-            <View className="hr" />
+            <View className='WhiteSpace' />
+            <View className='hr' />
           </View>
         ))}
       </View>

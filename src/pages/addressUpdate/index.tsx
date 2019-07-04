@@ -154,66 +154,66 @@ class Addressupdate extends Component {
       address_detail,
     } = this.props;
     return (
-      <View className="addressUpdate-page">
-        <View className="head">
+      <View className='addressUpdate-page'>
+        <View className='head'>
           {addressId && addressId !== '' ? '编辑地址' : '添加地址'}
         </View>
-        <View className="form">
+        <View className='form'>
           <Input
-            placeholder="收件人"
-            id="contact_name"
+            placeholder='收件人'
+            id='contact_name'
             value={contact_name}
             onInput={this.update}
           />
           <Input
-            type="number"
-            maxLength="11"
-            placeholder="手机号码"
-            id="contact_mobile"
+            type='number'
+            maxLength='11'
+            placeholder='手机号码'
+            id='contact_mobile'
             value={contact_mobile}
             onInput={this.update}
           />
           <Picker
-            className="picker"
-            mode="multiSelector"
-            rangeKey="name"
+            className='picker'
+            mode='multiSelector'
+            rangeKey='name'
             range={districts}
             onColumnchange={this.onColumnchange}
             onChange={this.onChange}
             value={pickerValue}
           >
             {showValue.region_name == '' ? (
-              <View className="label">
+              <View className='label'>
                 省、市、区
-                <View className="iconfont icon-more arrow" />
+                <View className='iconfont icon-more arrow' />
               </View>
             ) : (
-              <View className="picker-item">
+              <View className='picker-item'>
                 {showValue.region_name}
-                <View className="iconfont icon-more arrow" />
+                <View className='iconfont icon-more arrow' />
               </View>
             )}
           </Picker>
           <Input
-            placeholder="详细地址"
-            id="address_detail"
+            placeholder='详细地址'
+            id='address_detail'
             value={address_detail}
             onInput={this.update}
           />
         </View>
-        <View className="bottom-btn">
+        <View className='bottom-btn'>
           {addressId && addressId !== '' && (
-            <View className="confirm remove" onClick={this.delete}>
+            <View className='confirm remove' onClick={this.delete}>
               <Image
-                mode="widthFix"
+                mode='widthFix'
                 src={require('../../images/icon/times.png')}
               />
               <Text>删除</Text>
             </View>
           )}
-          <View className="confirm" onClick={this.submit}>
+          <View className='confirm' onClick={this.submit}>
             <Image
-              mode="widthFix"
+              mode='widthFix'
               src={require('../../images/icon/check.png')}
             />
             <Text>保存</Text>

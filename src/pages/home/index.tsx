@@ -60,20 +60,20 @@ class Index extends Component {
   render() {
     const { banner, brands, products_list, effects } = this.props;
     return (
-      <View className="home-page">
+      <View className='home-page'>
         <MySwiper banner={banner} home />
-        <View className="nav-list">
+        <View className='nav-list'>
           {brands.map((item, index) => (
-            <View className="nav-item" key={index}>
-              <Image mode="widthFix" src={item.image_src} />
+            <View className='nav-item' key={index}>
+              <Image mode='widthFix' src={item.image_src} />
             </View>
           ))}
         </View>
         {/* 流量主广告 */}
         {Taro.getEnv() === Taro.ENV_TYPE.WEAPP && (
-          <ad unit-id="adunit-dc1c0a38156fa412" />
+          <ad unit-id='adunit-dc1c0a38156fa412' />
         )}
-        <Text className="recommend">为你推荐</Text>
+        <Text className='recommend'>为你推荐</Text>
         <GoodsList list={products_list} loading={effects['home/product']} />
       </View>
     );
